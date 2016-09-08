@@ -7,9 +7,9 @@
                 <h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
             </div>
 
-            <fieldset><legend>render(controller())</legend>{{ render(controller('AppBundle:Default:test', { 'foo': 'bar', 'page': 5, 'limit': 9 }, { 'bar': 'foo' })) }}</fieldset>{# Render work as expected #}
+            <fieldset><legend>render(controller())</legend>{{ render(controller('AppBundle:Default:test', { 'foo': 'bar', 'page': 5, 'limit': 9, 'bar': 'foo' })) }}</fieldset>{# Render work as expected #}
             <fieldset><legend>render_hinclude(path())</legend>{{ render_hinclude(path('test', { 'foo': 'bar', 'page': 5, 'limit': 9, 'bar': 'foo' })) }} </fieldset>{# Render work as expected #}
-            <fieldset><legend>render_hinclude(controller())</legend>{{ render_hinclude(controller('AppBundle:Default:test', { 'foo': 'bar', 'page': 5, 'limit': 9 }, { 'bar': 'foo' })) }}</fieldset>{# Render does not work as expected #}
+            <fieldset><legend>render_hinclude(controller())</legend>{{ render_hinclude(controller('AppBundle:Default:test', { 'foo': 'bar', 'page': 5, 'limit': 9, 'bar': 'foo' })) }}</fieldset>{# Render does not work as expected #}
 
         </div>
     </div>
